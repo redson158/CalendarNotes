@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Organizer</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <div id="calendar-container">
+        <div id="calendar-header">
+            <h2 id="month-year"></h2>
+        </div>
+        <div id="calendar-grid">
+            <div id="days-header">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+            </div>
+            <div id="calendar-days">
+                <!-- Days will be populated here by JavaScript -->
+            </div>
+        </div>
+        <div id="workspace-container">
+            <div id="workspace">
+                <div class="blue note">Birthday 🎂</div>
+                <div class="yellow note">Appt 🩺</div>
+                <div class="pink note">Event ⭐</div>
+            </div>
+            <button id="reset-button">Reset Calendar</button>
+            <div id="trash-bin">🗑️</div>
+        </div>
+    </div>
+    <script src="calendarScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.1;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.note.blue {
+    background-color: blue;
+    color: white;
+}
+
+.note.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.note.pink {
+    background-color: pink;
+    color: black;
+}
+
+#calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-day {
+    min-height: 60px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column; /* Keeps day number at the top */
+    align-items: flex-end;
+    padding: 4px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: auto;
+    align-self: flex-end;
+    z-index: 1;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+}
+
+#days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4px;
+}
+
+#reset-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+}
+
+#reset-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#workspace-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+#workspace {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+#workspace .note {
+    width: 60px;
+    height: 60px;
+    font-size: 0.8rem;
+    transition: width 0.2s, height 0.2s;
+    cursor: pointer;
+}
+
+.calendar-day .note {
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+#trash-bin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+
+.note.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
